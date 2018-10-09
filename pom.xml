@@ -15,4 +15,24 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <!--Distribution Management to deploy file in central repository!-->
+<distributionManagement>
+  <repository>
+    <id>nexus</id>
+      <url>http://localhost:8081/nexus/content/repositories/releases</url>
+  </repository>
+  <snapshotRepository>
+    <id>nexus</id>
+      <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+  </snapshotRepository>
+</distributionManagement> 
+<reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>3.0.6-SNAPSHOT</version>
+      </plugin>
+    </plugins>
+  </reporting>
 </project>
